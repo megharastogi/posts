@@ -7,6 +7,7 @@
 //
 
 #import "AddDataViewController.h"
+#import "PostDoc.h"
 
 @interface AddDataViewController ()
 
@@ -101,6 +102,20 @@
 
 - (void)keyboardDidHide: (NSNotification *) notif{
     // Do something here
+}
+
+-(IBAction) pressedSubmitButton
+{
+        
+    PostDoc *post = [[PostDoc alloc] initWithUserName: _userName.text title: _postTitle.text content: _content.text];
+
+   
+    if( [_delegate respondsToSelector:@selector(addDataViewController:didCreateNewPost:)] ){
+        
+        [_delegate addDataViewController:self didCreateNewPost:post];
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 @end

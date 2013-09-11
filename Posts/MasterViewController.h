@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddDataViewController.h"
+#import "DetailViewController.h"
 
-@class DetailViewController;
-
-@interface MasterViewController : UITableViewController
+@interface MasterViewController : UITableViewController <AddDataDelegate,UpdateDataDelegate>
 
 @property (strong, nonatomic) DetailViewController *detailViewController;
 @property (strong) NSMutableArray *postList;

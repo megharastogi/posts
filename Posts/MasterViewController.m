@@ -11,7 +11,8 @@
 #import "DetailViewController.h"
 #import "PostData.h"
 #import "PostDoc.h"
-
+#import "AddDataViewController.h"
+#import "DetailViewController.h"
 
 @interface MasterViewController () {
     NSMutableArray *_objects;
@@ -133,6 +134,42 @@
         self.detailViewController.detailItem = post;
         [[segue destinationViewController] setDetailItem:post];
     }
+    
+    if ([[segue identifier] isEqualToString:@"addData"]) {
+
+        AddDataViewController* addDataController  = segue.destinationViewController;
+        addDataController.delegate = self;
+    }
+    
+    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+        
+        DetailViewController* detailViewController  = segue.destinationViewController;
+        detailViewController.delegate = self;
+    }
+
 }
+
+
+
+-(void) addDataViewController:(AddDataViewController *)addDataViewController
+             didCreateNewPost:(PostDoc*)post;
+{
+    
+    
+    [self.postList addObject:post];
+    [self.tableView reloadData];
+    
+}
+
+-(void) detailViewController:(DetailViewController *)detailViewController
+             didUpdatePost:(PostDoc*)post;
+{
+    
+    
+    [self.tableView reloadData];
+    
+}
+
+
 
 @end
