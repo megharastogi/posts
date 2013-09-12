@@ -13,6 +13,7 @@
 #import "PostDoc.h"
 #import "AddDataViewController.h"
 #import "DetailViewController.h"
+#import "UIColor+PickRandomColor.h"
 
 @interface MasterViewController () {
     NSMutableArray *_objects;
@@ -37,8 +38,9 @@
     PostDoc *post1 = [[PostDoc alloc] initWithUserName:@"Megha" title:@"Title1" content:@"someContent"];
     PostDoc *post2 = [[PostDoc alloc] initWithUserName:@"Megha" title:@"Title2" content:@"someContent2"];
     PostDoc *post3 = [[PostDoc alloc] initWithUserName:@"Megha" title:@"Title3" content:@"someContent3"];
-    self.postList = [NSMutableArray arrayWithObjects:post1, post2, post3, nil];
     
+    self.postList = [NSMutableArray arrayWithObjects:post1, post2, post3, nil];
+    self.firstRowColor = [UIColor pickRandomColor];
 	// Do any additional setup after loading the view, typically from a nib.
 //    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
@@ -83,6 +85,21 @@
 
     PostDoc *post = [self.postList objectAtIndex:indexPath.row];
     cell.textLabel.text = post.data.title;
+    switch (indexPath.row) {
+        case 0:
+            NSLog(@"first row");
+            break;
+        case 1:
+            self.firstRowColor = [self.firstRowColor returnLighterColor];
+            NSLog(@"first two");
+            break;
+        default:
+            self.firstRowColor = [self.firstRowColor returnLighterColor];
+            NSLog(@"first three");
+            break;
+    }
+    [cell setBackgroundColor:self.firstRowColor];
+
     return cell;
 }
 
@@ -155,7 +172,7 @@
              didCreateNewPost:(PostDoc*)post;
 {
     
-    
+    self.firstRowColor = [UIColor pickRandomColor];
     [self.postList addObject:post];
     [self.tableView reloadData];
     
@@ -165,7 +182,7 @@
              didUpdatePost:(PostDoc*)post;
 {
     
-    
+    self.firstRowColor = [UIColor pickRandomColor];
     [self.tableView reloadData];
     
 }

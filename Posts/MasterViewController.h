@@ -14,5 +14,6 @@
 
 @property (strong, nonatomic) DetailViewController *detailViewController;
 @property (strong) NSMutableArray *postList;
+@property (nonatomic) UIColor *firstRowColor;
 
 @end

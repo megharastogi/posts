@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Posts/MasterViewController.m"
-            timestampString = "400628441.239874"
+            timestampString = "400649267.609977"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
             landmarkName = "-detailViewController:didUpdatePost:"
             landmarkType = "5">
          </BreakpointContent>

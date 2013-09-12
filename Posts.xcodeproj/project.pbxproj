@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0478C41217E122F0002EDA59 /* UIColor+PickRandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478C41117E122F0002EDA59 /* UIColor+PickRandomColor.m */; };
 		04C2D21117DFF11B0086B9AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C2D21017DFF11B0086B9AD /* Foundation.framework */; };
 		04C2D21317DFF11B0086B9AD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C2D21217DFF11B0086B9AD /* CoreGraphics.framework */; };
 		04C2D21517DFF11B0086B9AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C2D21417DFF11B0086B9AD /* UIKit.framework */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0478C41017E122F0002EDA59 /* UIColor+PickRandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+PickRandomColor.h"; sourceTree = "<group>"; };
+		0478C41117E122F0002EDA59 /* UIColor+PickRandomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PickRandomColor.m"; sourceTree = "<group>"; };
 		04C2D20D17DFF11B0086B9AD /* Posts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C2D21017DFF11B0086B9AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		04C2D21217DFF11B0086B9AD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -130,6 +133,8 @@
 				04C2D24B17DFF16B0086B9AD /* Model */,
 				04C2D22E17DFF11B0086B9AD /* Images.xcassets */,
 				04C2D21717DFF11B0086B9AD /* Supporting Files */,
+				0478C41017E122F0002EDA59 /* UIColor+PickRandomColor.h */,
+				0478C41117E122F0002EDA59 /* UIColor+PickRandomColor.m */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -292,6 +297,7 @@
 				04C2D25217DFF3C60086B9AD /* PostDoc.m in Sources */,
 				04C2D25517E03E660086B9AD /* AddDataViewController.m in Sources */,
 				04C2D22117DFF11B0086B9AD /* AppDelegate.m in Sources */,
+				0478C41217E122F0002EDA59 /* UIColor+PickRandomColor.m in Sources */,
 				04C2D22A17DFF11B0086B9AD /* MasterViewController.m in Sources */,
 				04C2D21D17DFF11B0086B9AD /* main.m in Sources */,
 				04C2D22D17DFF11B0086B9AD /* DetailViewController.m in Sources */,
@@ -508,6 +514,7 @@
 				04C2D24717DFF11B0086B9AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04C2D24817DFF11B0086B9AD /* Build configuration list for PBXNativeTarget "PostsTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +523,7 @@
 				04C2D24A17DFF11B0086B9AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

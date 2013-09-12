@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>381FC090-33D7-4586-B6CD-C6D816C6E41F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Posts</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6511F6E7-4E1A-491B-86E7-ED5F4ACC9871</key>
+		<string>ssh://github.com/megharastogi/posts.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Posts.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6511F6E7-4E1A-491B-86E7-ED5F4ACC9871</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/megharastogi/posts.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6511F6E7-4E1A-491B-86E7-ED5F4ACC9871</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6511F6E7-4E1A-491B-86E7-ED5F4ACC9871</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Posts</string>
+		</dict>
+	</array>
+</dict>
+</plist>
