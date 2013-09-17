@@ -17,6 +17,8 @@
 {
     
     [NSRConfig defaultConfig].appURL = @"http://localhost:3000";
+    [NSRConfig defaultConfig].appPassword = @"megha";
+    [NSRConfig defaultConfig].appUsername = @"megha";
 
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
