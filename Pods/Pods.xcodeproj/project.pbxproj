@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1441C7F264CB48D78866F3C6 /* NSData+NSRBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = 87E172E6944C4958B6D3C60A /* NSData+NSRBase64.h */; };
+		1C2820BAD39B47ECB098391F /* Pods-NSRails-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 20325D4963EA43EC83F49747 /* Pods-NSRails-dummy.m */; };
+		221A774B069146FDACBA3D03 /* NSData+NSRBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 51661AD652AA454EA39FF572 /* NSData+NSRBase64.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		2D65ABD4FC8C4465A0F2BD3D /* NSRRemoteObject.h in Headers */ = {isa = PBXBuildFile; fileRef = D180B69CFC8743E7B84B3445 /* NSRRemoteObject.h */; };
+		33BDD0CDFA22413A866CE93C /* NSRRemoteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8015FECD767841B997483BF0 /* NSRRemoteObject.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		3607A17BA4F74F5581B2DBF9 /* NSRConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 593A730767BD498FA1019482 /* NSRConfig.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		3691398D50CF40A48C13C8B4 /* NSMutableArray+NSRails.m in Sources */ = {isa = PBXBuildFile; fileRef = AC4EF55C72384238AEACFBA6 /* NSMutableArray+NSRails.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		4C604971B93946F5BEAA44C4 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 280B77BE624F499EA0C99580 /* Pods-dummy.m */; };
+		72DF77889F4249779A0AB5B8 /* NSRRemoteManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A8D991446E4E1B970BC230 /* NSRRemoteManagedObject.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		74A3B17215EC439192350229 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0616B5DDF8F4D84B1405CD1 /* Foundation.framework */; };
+		99A7D19AFF87454B88DFC944 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0616B5DDF8F4D84B1405CD1 /* Foundation.framework */; };
+		9BB2673C9D8944BF959ACD31 /* NSRRemoteManagedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F50952A53CF4F16B2DF0147 /* NSRRemoteManagedObject.h */; };
+		A1B650DB60C54EFB9CFA45C4 /* libPods-NSRails.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 820AC6DC60834207985CEC47 /* libPods-NSRails.a */; };
+		A50E584B6785449D8C76FAF6 /* NSRConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 50EC1C32D38248B9AF6D13A9 /* NSRConfig.h */; };
+		AE6287FC97414C75AED14793 /* NSString+NSRInflection.h in Headers */ = {isa = PBXBuildFile; fileRef = 14E6B7D243464C79A376E785 /* NSString+NSRInflection.h */; };
+		BBEFE539D6D341A390368FD7 /* NSRails.h in Headers */ = {isa = PBXBuildFile; fileRef = 35636AF11BFF495583A906C7 /* NSRails.h */; };
+		CEA567D1698148C3A7172A9D /* NSRRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C4753F755B4C8AA770258A /* NSRRequest.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		D19BA4018489476BB8347200 /* NSString+NSRInflection.m in Sources */ = {isa = PBXBuildFile; fileRef = A45A19B8FCCF4CE1ABD0D4F9 /* NSString+NSRInflection.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		D61D52FB5EB14366BEE47472 /* NSMutableArray+NSRails.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A4CDBCD9F83446085709E6F /* NSMutableArray+NSRails.h */; };
+		DBA4E921DBF04ADD84C2C88C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B505D2BDA7F14F0F9D9BCA67 /* CoreData.framework */; };
+		F5BD397233DE48489294BCF9 /* NSRRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C09D58482044EA3B1A41939 /* NSRRequest.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EBA833DE009448EA99C629A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DEC01F501B2434590EB7E90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AFE90E81DFE4A2A9FEE4D61;
+			remoteInfo = "Pods-NSRails";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F50952A53CF4F16B2DF0147 /* NSRRemoteManagedObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NSRRemoteManagedObject.h; path = nsrails/Source/NSRRemoteManagedObject.h; sourceTree = "<group>"; };
+		14E6B7D243464C79A376E785 /* NSString+NSRInflection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+NSRInflection.h"; path = "nsrails/Source/Categories/NSString+NSRInflection.h"; sourceTree = "<group>"; };
+		17041155C5C24A60ABC5D491 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		20325D4963EA43EC83F49747 /* Pods-NSRails-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NSRails-dummy.m"; sourceTree = "<group>"; };
+		280B77BE624F499EA0C99580 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		3024923B9AD24A798C398123 /* Pods-NSRails.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NSRails.xcconfig"; sourceTree = "<group>"; };
+		35636AF11BFF495583A906C7 /* NSRails.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NSRails.h; path = nsrails/Source/NSRails.h; sourceTree = "<group>"; };
+		40A2A7A9ADE1459B9998187C /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		4C135AD8DD274487A51C2FCF /* Pods-NSRails-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NSRails-Private.xcconfig"; sourceTree = "<group>"; };
+		4E09BAE774C94C2AA2E79988 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		50EC1C32D38248B9AF6D13A9 /* NSRConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NSRConfig.h; path = nsrails/Source/NSRConfig.h; sourceTree = "<group>"; };
+		51661AD652AA454EA39FF572 /* NSData+NSRBase64.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+NSRBase64.m"; path = "nsrails/Source/Categories/NSData+NSRBase64.m"; sourceTree = "<group>"; };
+		593A730767BD498FA1019482 /* NSRConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NSRConfig.m; path = nsrails/Source/NSRConfig.m; sourceTree = "<group>"; };
+		7C09D58482044EA3B1A41939 /* NSRRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NSRRequest.h; path = nsrails/Source/NSRRequest.h; sourceTree = "<group>"; };
+		8015FECD767841B997483BF0 /* NSRRemoteObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NSRRemoteObject.m; path = nsrails/Source/NSRRemoteObject.m; sourceTree = "<group>"; };
+		820AC6DC60834207985CEC47 /* libPods-NSRails.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NSRails.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		87E172E6944C4958B6D3C60A /* NSData+NSRBase64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+NSRBase64.h"; path = "nsrails/Source/Categories/NSData+NSRBase64.h"; sourceTree = "<group>"; };
+		9A4CDBCD9F83446085709E6F /* NSMutableArray+NSRails.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+NSRails.h"; path = "nsrails/Source/Categories/NSMutableArray+NSRails.h"; sourceTree = "<group>"; };
+		A0616B5DDF8F4D84B1405CD1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A45A19B8FCCF4CE1ABD0D4F9 /* NSString+NSRInflection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+NSRInflection.m"; path = "nsrails/Source/Categories/NSString+NSRInflection.m"; sourceTree = "<group>"; };
+		A68B516803FE4409B0A1AEC3 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.xcconfig; sourceTree = "<group>"; };
+		AC4EF55C72384238AEACFBA6 /* NSMutableArray+NSRails.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+NSRails.m"; path = "nsrails/Source/Categories/NSMutableArray+NSRails.m"; sourceTree = "<group>"; };
+		B505D2BDA7F14F0F9D9BCA67 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
+		BD0F6A89F75B4398B96DB9E9 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D180B69CFC8743E7B84B3445 /* NSRRemoteObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NSRRemoteObject.h; path = nsrails/Source/NSRRemoteObject.h; sourceTree = "<group>"; };
+		D1B1BC6A04E84A8AA6B83785 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		D4A8D991446E4E1B970BC230 /* NSRRemoteManagedObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NSRRemoteManagedObject.m; path = nsrails/Source/NSRRemoteManagedObject.m; sourceTree = "<group>"; };
+		E24E0D7AFAFC4599BF2681CB /* Pods-NSRails-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NSRails-prefix.pch"; sourceTree = "<group>"; };
+		E3C4753F755B4C8AA770258A /* NSRRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NSRRequest.m; path = nsrails/Source/NSRRequest.m; sourceTree = "<group>"; };
+		FB3CC1C1213547D9A8D14EAB /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4609AEE1BA1D4F0880935272 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99A7D19AFF87454B88DFC944 /* Foundation.framework in Frameworks */,
+				A1B650DB60C54EFB9CFA45C4 /* libPods-NSRails.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D36FB4896CF40409363F015 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74A3B17215EC439192350229 /* Foundation.framework in Frameworks */,
+				DBA4E921DBF04ADD84C2C88C /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0556FB38E23D446A824EA91B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				820AC6DC60834207985CEC47 /* libPods-NSRails.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3760DC30DDB449B0BBEA8335 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				87E172E6944C4958B6D3C60A /* NSData+NSRBase64.h */,
+				51661AD652AA454EA39FF572 /* NSData+NSRBase64.m */,
+				9A4CDBCD9F83446085709E6F /* NSMutableArray+NSRails.h */,
+				AC4EF55C72384238AEACFBA6 /* NSMutableArray+NSRails.m */,
+				50EC1C32D38248B9AF6D13A9 /* NSRConfig.h */,
+				593A730767BD498FA1019482 /* NSRConfig.m */,
+				0F50952A53CF4F16B2DF0147 /* NSRRemoteManagedObject.h */,
+				D4A8D991446E4E1B970BC230 /* NSRRemoteManagedObject.m */,
+				D180B69CFC8743E7B84B3445 /* NSRRemoteObject.h */,
+				8015FECD767841B997483BF0 /* NSRRemoteObject.m */,
+				7C09D58482044EA3B1A41939 /* NSRRequest.h */,
+				E3C4753F755B4C8AA770258A /* NSRRequest.m */,
+				35636AF11BFF495583A906C7 /* NSRails.h */,
+				14E6B7D243464C79A376E785 /* NSString+NSRInflection.h */,
+				A45A19B8FCCF4CE1ABD0D4F9 /* NSString+NSRInflection.m */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		39AA1194315E4ACE8C2582BF /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6351366BB7A4424B8A254D50 /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		3AB159E9AFCE47F6BA001899 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B505D2BDA7F14F0F9D9BCA67 /* CoreData.framework */,
+				A0616B5DDF8F4D84B1405CD1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4F72CD1A466E4779ADB4E8B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0C30E7243A5421B803A8B8B /* NSRails */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		513A95F06F394257A9FD8AAC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4E09BAE774C94C2AA2E79988 /* libPods.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6351366BB7A4424B8A254D50 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD0F6A89F75B4398B96DB9E9 /* Pods-acknowledgements.markdown */,
+				D1B1BC6A04E84A8AA6B83785 /* Pods-acknowledgements.plist */,
+				280B77BE624F499EA0C99580 /* Pods-dummy.m */,
+				FB3CC1C1213547D9A8D14EAB /* Pods-environment.h */,
+				40A2A7A9ADE1459B9998187C /* Pods-resources.sh */,
+				A68B516803FE4409B0A1AEC3 /* Pods.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8BF764FAAE164CB384742205 = {
+			isa = PBXGroup;
+			children = (
+				3AB159E9AFCE47F6BA001899 /* Frameworks */,
+				4F72CD1A466E4779ADB4E8B4 /* Pods */,
+				513A95F06F394257A9FD8AAC /* Products */,
+				39AA1194315E4ACE8C2582BF /* Targets Support Files */,
+				17041155C5C24A60ABC5D491 /* Podfile */,
+			);
+			sourceTree = "<group>";
+		};
+		D0C30E7243A5421B803A8B8B /* NSRails */ = {
+			isa = PBXGroup;
+			children = (
+				0556FB38E23D446A824EA91B /* Products */,
+				3760DC30DDB449B0BBEA8335 /* Source Files */,
+				E7027B2F4C4A410E9CA39DDE /* Support Files */,
+			);
+			path = NSRails;
+			sourceTree = "<group>";
+		};
+		E7027B2F4C4A410E9CA39DDE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C135AD8DD274487A51C2FCF /* Pods-NSRails-Private.xcconfig */,
+				20325D4963EA43EC83F49747 /* Pods-NSRails-dummy.m */,
+				E24E0D7AFAFC4599BF2681CB /* Pods-NSRails-prefix.pch */,
+				3024923B9AD24A798C398123 /* Pods-NSRails.xcconfig */,
+			);
+			name = "Support Files";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		31ABD68A640C459984F1427A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBEFE539D6D341A390368FD7 /* NSRails.h in Headers */,
+				A50E584B6785449D8C76FAF6 /* NSRConfig.h in Headers */,
+				9BB2673C9D8944BF959ACD31 /* NSRRemoteManagedObject.h in Headers */,
+				2D65ABD4FC8C4465A0F2BD3D /* NSRRemoteObject.h in Headers */,
+				F5BD397233DE48489294BCF9 /* NSRRequest.h in Headers */,
+				1441C7F264CB48D78866F3C6 /* NSData+NSRBase64.h in Headers */,
+				D61D52FB5EB14366BEE47472 /* NSMutableArray+NSRails.h in Headers */,
+				AE6287FC97414C75AED14793 /* NSString+NSRInflection.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0AFE90E81DFE4A2A9FEE4D61 /* Pods-NSRails */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7784B177C3AA4760AC2D1450 /* Build configuration list for PBXNativeTarget "Pods-NSRails" */;
+			buildPhases = (
+				53A61C0008AD4C94916BD5C7 /* Sources */,
+				9D36FB4896CF40409363F015 /* Frameworks */,
+				31ABD68A640C459984F1427A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-NSRails";
+			productName = "Pods-NSRails";
+			productReference = 820AC6DC60834207985CEC47 /* libPods-NSRails.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E61091D2C16E4F7C9B881848 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A7196183018458994DD4418 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				74C7062066C345D0A34774F8 /* Sources */,
+				4609AEE1BA1D4F0880935272 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				866E16921ECA44209D91603D /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 4E09BAE774C94C2AA2E79988 /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6DEC01F501B2434590EB7E90 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = A14A07750AAF42C984015298 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8BF764FAAE164CB384742205;
+			productRefGroup = 513A95F06F394257A9FD8AAC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0AFE90E81DFE4A2A9FEE4D61 /* Pods-NSRails */,
+				E61091D2C16E4F7C9B881848 /* Pods */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		53A61C0008AD4C94916BD5C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3607A17BA4F74F5581B2DBF9 /* NSRConfig.m in Sources */,
+				72DF77889F4249779A0AB5B8 /* NSRRemoteManagedObject.m in Sources */,
+				33BDD0CDFA22413A866CE93C /* NSRRemoteObject.m in Sources */,
+				CEA567D1698148C3A7172A9D /* NSRRequest.m in Sources */,
+				221A774B069146FDACBA3D03 /* NSData+NSRBase64.m in Sources */,
+				3691398D50CF40A48C13C8B4 /* NSMutableArray+NSRails.m in Sources */,
+				D19BA4018489476BB8347200 /* NSString+NSRInflection.m in Sources */,
+				1C2820BAD39B47ECB098391F /* Pods-NSRails-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74C7062066C345D0A34774F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C604971B93946F5BEAA44C4 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		866E16921ECA44209D91603D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AFE90E81DFE4A2A9FEE4D61 /* Pods-NSRails */;
+			targetProxy = EBA833DE009448EA99C629A8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		88CB90285A244304B986EF52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C135AD8DD274487A51C2FCF /* Pods-NSRails-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-NSRails-prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA6A6767B5CD435F8C7FE863 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A68B516803FE4409B0A1AEC3 /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B67A64829A974A14831FED58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		F2071E20BF6249F6BD0715A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C135AD8DD274487A51C2FCF /* Pods-NSRails-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-NSRails-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F7C98F7A59AD4A709E9ECD77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Release;
+		};
+		FED77132DAE1448495947A3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A68B516803FE4409B0A1AEC3 /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7784B177C3AA4760AC2D1450 /* Build configuration list for PBXNativeTarget "Pods-NSRails" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88CB90285A244304B986EF52 /* Release */,
+				F2071E20BF6249F6BD0715A7 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A7196183018458994DD4418 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA6A6767B5CD435F8C7FE863 /* Release */,
+				FED77132DAE1448495947A3D /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A14A07750AAF42C984015298 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B67A64829A974A14831FED58 /* Debug */,
+				F7C98F7A59AD4A709E9ECD77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6DEC01F501B2434590EB7E90 /* Project object */;
+}
