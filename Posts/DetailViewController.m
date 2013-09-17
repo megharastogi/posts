@@ -103,9 +103,29 @@
         
         [_delegate detailViewController:self didUpdatePost:_detailItem];
     }
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popToRootViewControllerAnimated:YES];
     
 }
+
+-(IBAction) pressedDelete
+{
+    
+    [Post remoteObjectWithID:_detailItem.remoteObjectID async:^(Post *myPost, NSError *error) {
+        myPost.remoteID = _detailItem.remoteObjectID;
+        [myPost remoteDestroy:&error];
+        
+    }];
+    
+    if( [_delegate respondsToSelector:@selector(detailViewController:didDeletePost:)] ){
+        
+        [_delegate detailViewController:self didDeletePost:_detailItem];
+    }
+
+
+    [self.navigationController popToRootViewControllerAnimated:YES];
+
+}
+
 #pragma mark - Split view
 
 - (void)splitViewController:(UISplitViewController *)splitController willHideViewController:(UIViewController *)viewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)popoverController

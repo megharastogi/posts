@@ -15,6 +15,9 @@
 @optional
 -(void) detailViewController:(DetailViewController*)detailViewController
              didUpdatePost:(PostDoc*)post;
+
+-(void) detailViewController:(DetailViewController*)detailViewController
+               didDeletePost:(PostDoc*)post;
 @end
 
 
@@ -33,4 +36,5 @@
 
 -(IBAction) pressedUpdateButton;
 
+-(IBAction)pressedDelete;
 @end

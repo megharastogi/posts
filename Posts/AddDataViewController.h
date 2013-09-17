@@ -34,6 +34,7 @@
 -(IBAction) pressedSubmitButton;
 
 @property (strong,nonatomic) UITextField *activeField;
+@property (strong,nonatomic) UITextView *activeTextView;
 
 #pragma mark - Public Methods
 

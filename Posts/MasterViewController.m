@@ -64,9 +64,6 @@
 	// Do any additional setup after loading the view, typically from a nib.
 //    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
-    self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
     self.title = @"Post List";
 
@@ -179,7 +176,6 @@
              didCreateNewPost:(PostDoc*)post;
 {
     
-    self.firstRowColor = [UIColor pickRandomColor];
     [self.postList addObject:post];
     [self.tableView reloadData];
     
@@ -188,8 +184,16 @@
 -(void) detailViewController:(DetailViewController *)detailViewController
              didUpdatePost:(PostDoc*)post;
 {
+    [self.tableView reloadData];
     
-    self.firstRowColor = [UIColor pickRandomColor];
+}
+
+-(void) detailViewController:(DetailViewController *)detailViewController
+               didDeletePost:(PostDoc*)post;
+{
+    
+    [self.postList removeObject:post];
+
     [self.tableView reloadData];
     
 }

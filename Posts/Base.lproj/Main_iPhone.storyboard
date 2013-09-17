@@ -35,18 +35,18 @@
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2pz-XF-uhl">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2pz-XF-uhl">
                                             <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="Ah7-4n-0Wa" kind="modal" identifier="showDetail" id="jUr-3t-vfg"/>
+                                    <segue destination="Ah7-4n-0Wa" kind="push" identifier="showDetail" id="jUr-3t-vfg"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -56,10 +56,13 @@
                             <outlet property="delegate" destination="pGg-6v-bdr" id="Y6K-Cp-Qkv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Post List" id="tQt-TN-PWz"/>
-                    <connections>
-                        <segue destination="iUz-Y2-cCH" kind="modal" identifier="addData" id="vF9-Ky-SeD"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="Post List" id="tQt-TN-PWz">
+                        <barButtonItem key="rightBarButtonItem" title="+" id="vCd-BM-aUR">
+                            <connections>
+                                <segue destination="iUz-Y2-cCH" kind="push" identifier="createNew" id="htJ-or-a2a"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>
@@ -123,7 +126,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Post Detail" id="cra-N8-TIN"/>
+                    <navigationItem key="navigationItem" title="Post Detail" id="cra-N8-TIN">
+                        <barButtonItem key="rightBarButtonItem" title="Delete" id="35o-KZ-qGc">
+                            <connections>
+                                <action selector="pressedDelete" destination="Ah7-4n-0Wa" id="ptu-sr-ikt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="content" destination="Ks0-i2-3mc" id="4fD-UX-iDr"/>
                         <outlet property="detailDescriptionLabel" destination="nsj-ZI-tVS" id="2Cb-JQ-UM6"/>
@@ -135,7 +144,7 @@
             </objects>
             <point key="canvasLocation" x="990" y="-150"/>
         </scene>
-        <!--Add Data View Controller-->
+        <!--Add Data View Controller - Create New Post-->
         <scene sceneID="Q3c-Ph-pJ3">
             <objects>
                 <viewController id="iUz-Y2-cCH" customClass="AddDataViewController" sceneMemberID="viewController">
@@ -159,7 +168,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tzH-ch-EkV">
-                                        <rect key="frame" x="29" y="50" width="268" height="30"/>
+                                        <rect key="frame" x="29" y="92" width="268" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -168,7 +177,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rwZ-bs-IYh">
-                                        <rect key="frame" x="29" y="100" width="268" height="30"/>
+                                        <rect key="frame" x="29" y="43" width="268" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -177,7 +186,7 @@
                                         </connections>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E2T-89-QgE">
-                                        <rect key="frame" x="29" y="167" width="268" height="147"/>
+                                        <rect key="frame" x="29" y="170" width="268" height="147"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -187,14 +196,14 @@
                                         </connections>
                                     </textView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Content" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgE-JA-R9U">
-                                        <rect key="frame" x="29" y="138" width="62" height="21"/>
+                                        <rect key="frame" x="29" y="144" width="62" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vY-Rq-3jB">
-                                        <rect key="frame" x="128" y="344" width="70" height="30"/>
+                                        <rect key="frame" x="128" y="395" width="70" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Save Post">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -212,7 +221,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Hob-ES-QKk"/>
+                    <navigationItem key="navigationItem" title="Create New Post" id="Hob-ES-QKk"/>
                     <connections>
                         <outlet property="content" destination="E2T-89-QgE" id="IPq-PN-Cv0"/>
                         <outlet property="postTitle" destination="rwZ-bs-IYh" id="eRP-rB-t3n"/>

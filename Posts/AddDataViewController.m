@@ -85,10 +85,19 @@
     CGRect aRect = self.view.frame;
     aRect.size.height -= kbSize.height;
 
+    
     if (!CGRectContainsPoint(aRect, self.activeField.frame.origin) ) {
         CGPoint scrollPoint = CGPointMake(0.0, self.activeField.frame.origin.y-kbSize.height);
         [self.scrollView setContentOffset:scrollPoint animated:YES];
     }
+    
+    NSLog(@"text view got focus %f",self.activeTextView.frame.origin.y);
+    
+    if (!CGRectContainsPoint(aRect, self.activeTextView.frame.origin) ) {
+        CGPoint scrollPoint = CGPointMake(0.0, self.activeTextView.frame.origin.y);
+        [self.scrollView setContentOffset:scrollPoint animated:YES];
+    }
+
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
@@ -97,9 +106,9 @@
 
 - (BOOL)textViewShouldBeginEditing:(UITextView *)aTextView
 {
-    NSLog(@"text view got focus");
-    //Has Focus
+    self.activeTextView = aTextView;
     return YES;
+    //Has Focus
 }
 
 - (void)keyboardDidHide: (NSNotification *) notif{
@@ -109,21 +118,13 @@
 -(IBAction) pressedSubmitButton
 {
 
-    if([_userName.text  isEqual: @""]){
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Text field is blank"
-                                                        message:@"Are you sure you want to submit it"
-                                                       delegate:self
-                                              cancelButtonTitle:@"Yes"
-                                              otherButtonTitles:@"No", nil];
-        [alert show];
-    }
-    PostDoc *post = [[PostDoc alloc] initWithUserName: _userName.text title: _postTitle.text content: _content.text postColor:[UIColor pickRandomColor]];
+      PostDoc *post = [[PostDoc alloc] initWithUserName: _userName.text title: _postTitle.text content: _content.text postColor:[UIColor pickRandomColor]];
     
     Post *newPost = [[Post alloc] init];
     newPost.title =_postTitle.text;
     newPost.userName =_userName.text;
     newPost.content =_content.text;
-
+    newPost.id = nil;
     [newPost remoteCreate:nil];
 
    
@@ -131,15 +132,12 @@
         
         [_delegate addDataViewController:self didCreateNewPost:post];
     }
-   [self dismissViewControllerAnimated:YES completion:nil];
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
     
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    NSLog(@"something %ld",(long)buttonIndex);
 
-}
 
 
 @end
