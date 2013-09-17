@@ -16,7 +16,7 @@
              didCreateNewPost:(PostDoc*)post;
 @end
 
-@interface AddDataViewController : UIViewController <UIGestureRecognizerDelegate, UITextViewDelegate, UITextFieldDelegate>
+@interface AddDataViewController : UIViewController <UIGestureRecognizerDelegate, UITextViewDelegate, UITextFieldDelegate,UIAlertViewDelegate>
 
 
 @property (nonatomic, weak) id <AddDataDelegate> delegate;

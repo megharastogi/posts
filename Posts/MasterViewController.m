@@ -11,6 +11,7 @@
 #import "DetailViewController.h"
 #import "PostData.h"
 #import "PostDoc.h"
+#import "Post.h"
 #import "AddDataViewController.h"
 #import "DetailViewController.h"
 #import "UIColor+PickRandomColor.h"
@@ -35,12 +36,31 @@
 {
     [super viewDidLoad];
     
-    PostDoc *post1 = [[PostDoc alloc] initWithUserName:@"Megha" title:@"Title1" content:@"someContent"];
-    PostDoc *post2 = [[PostDoc alloc] initWithUserName:@"Megha" title:@"Title2" content:@"someContent2"];
-    PostDoc *post3 = [[PostDoc alloc] initWithUserName:@"Megha" title:@"Title3" content:@"someContent3"];
+    self.postList = [[NSMutableArray alloc] init];
+
     
-    self.postList = [NSMutableArray arrayWithObjects:post1, post2, post3, nil];
+    [Post remoteAllAsync:^(NSArray *allRemote, NSError *error) {
+       
+        NSMutableArray * postListRails = [NSMutableArray arrayWithArray:allRemote];
+        
+        
+        for( Post* post in postListRails ) {
+            PostDoc *post1 = [[PostDoc alloc] initWithUserName:post.userName title:post.title content:post.content postColor:[UIColor pickRandomColor]];
+            
+            NSDictionary *hashSentByRails = post.remoteAttributes;
+
+            post1.remoteObjectID = hashSentByRails[@"id"];
+            [self.postList addObject:post1];
+        }
+        
+        [self.tableView reloadData];
+        [self.refreshControl endRefreshing];
+    }];
+
+    
+     NSLog(@"asdad%@", self.postList);
     self.firstRowColor = [UIColor pickRandomColor];
+    
 	// Do any additional setup after loading the view, typically from a nib.
 //    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
@@ -85,20 +105,7 @@
 
     PostDoc *post = [self.postList objectAtIndex:indexPath.row];
     cell.textLabel.text = post.data.title;
-    switch (indexPath.row) {
-        case 0:
-            NSLog(@"first row");
-            break;
-        case 1:
-            self.firstRowColor = [self.firstRowColor returnLighterColor];
-            NSLog(@"first two");
-            break;
-        default:
-            self.firstRowColor = [self.firstRowColor returnLighterColor];
-            NSLog(@"first three");
-            break;
-    }
-    [cell setBackgroundColor:self.firstRowColor];
+    [cell setBackgroundColor:post.data.postColor];
 
     return cell;
 }

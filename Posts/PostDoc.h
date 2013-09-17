@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "PostData.h"
+#import <NSRails/NSRails.h>
+
 @interface PostDoc : NSObject
     @property (nonatomic) PostData* data;
-    -(id)initWithUserName:(NSString *)userName title:(NSString*)title content:(NSString*)content;
+    -(id)initWithUserName:(NSString *)userName title:(NSString*)title content:(NSString*)content postColor:(UIColor*)postColor;
+    @property (nonatomic,strong) NSNumber* remoteObjectID;
 @end

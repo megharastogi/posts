@@ -13,7 +13,7 @@
     @property (nonatomic) NSString* title;
     @property (nonatomic) NSString* content;
     @property (nonatomic) NSString* timeStamp;
-
+    @property (nonatomic) UIColor* postColor;
     - (id)initWithTimeStamp;
 
 @end

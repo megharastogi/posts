@@ -9,11 +9,15 @@
 #import "AppDelegate.h"
 #import "MasterViewController.h"
 #import "PostDoc.h"
+#import <NSRails/NSRails.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [NSRConfig defaultConfig].appURL = @"http://localhost:3000";
+
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
@@ -22,6 +26,8 @@
     }
     return YES;
 }
+
+
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {

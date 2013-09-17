@@ -8,8 +8,10 @@
 
 #import "AddDataViewController.h"
 #import "PostDoc.h"
+#import "UIColor+PickRandomColor.h"
+#import "Post.h"
 
-@interface AddDataViewController ()
+@interface AddDataViewController () 
 
 @end
 
@@ -106,16 +108,38 @@
 
 -(IBAction) pressedSubmitButton
 {
-        
-    PostDoc *post = [[PostDoc alloc] initWithUserName: _userName.text title: _postTitle.text content: _content.text];
+
+    if([_userName.text  isEqual: @""]){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Text field is blank"
+                                                        message:@"Are you sure you want to submit it"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Yes"
+                                              otherButtonTitles:@"No", nil];
+        [alert show];
+    }
+    PostDoc *post = [[PostDoc alloc] initWithUserName: _userName.text title: _postTitle.text content: _content.text postColor:[UIColor pickRandomColor]];
+    
+    Post *newPost = [[Post alloc] init];
+    newPost.title =_postTitle.text;
+    newPost.userName =_userName.text;
+    newPost.content =_content.text;
+
+    [newPost remoteCreate:nil];
 
    
     if( [_delegate respondsToSelector:@selector(addDataViewController:didCreateNewPost:)] ){
         
         [_delegate addDataViewController:self didCreateNewPost:post];
     }
-    [self dismissViewControllerAnimated:YES completion:nil];
+   [self dismissViewControllerAnimated:YES completion:nil];
     
 }
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSLog(@"something %ld",(long)buttonIndex);
+
+}
+
 
 @end

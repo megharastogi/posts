@@ -9,6 +9,7 @@
 #import "DetailViewController.h"
 #import "PostDoc.h"
 #import "PostData.h"
+#import "Post.h"
 
 @interface DetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -83,8 +84,21 @@
     
     dateString = [formatter stringFromDate:[NSDate date]];
     _detailItem.data.timeStamp = dateString;
-
     
+    
+    NSLog(@"asjdaskld%@",_detailItem.remoteObjectID);
+    
+    [Post remoteObjectWithID:_detailItem.remoteObjectID async:^(Post *myPost, NSError *error) {
+
+        myPost.title = _detailDescriptionLabel.text;
+        myPost.userName = _userName.text;
+        myPost.content = _content.text;
+        myPost.remoteID = _detailItem.remoteObjectID;
+        [myPost remoteUpdate:&error];
+
+    }];
+
+
     if( [_delegate respondsToSelector:@selector(detailViewController:didUpdatePost:)] ){
         
         [_delegate detailViewController:self didUpdatePost:_detailItem];

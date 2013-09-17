@@ -27,7 +27,8 @@
     
     [self getHue:&hue saturation:&saturation brightness:&brightness alpha:&alpha];
     NSLog(@"Current Color hue: %0.2f, saturation: %0.2f, brightness: %0.2f, alpha: %0.2f", hue, saturation, brightness, alpha);
-    saturation = saturation - 0.20;
+    saturation = MIN((saturation - 0.20), 1);
+    
     UIColor *color = [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:alpha];
     return color;
 }
