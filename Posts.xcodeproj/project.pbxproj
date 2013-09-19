@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042C079417EA220A005E989B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042C079317EA220A005E989B /* AVFoundation.framework */; };
+		042C079617EA2341005E989B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042C079517EA2341005E989B /* CoreMedia.framework */; };
+		042C079817EA2349005E989B /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042C079717EA2349005E989B /* CoreVideo.framework */; };
+		042C079C17EAB006005E989B /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042C079B17EAB006005E989B /* AWSS3.framework */; };
+		042C079E17EAB71A005E989B /* AWSRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042C079D17EAB71A005E989B /* AWSRuntime.framework */; };
 		0478C41217E122F0002EDA59 /* UIColor+PickRandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478C41117E122F0002EDA59 /* UIColor+PickRandomColor.m */; };
+		048C5E7717EB8A5600EF0E58 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048C5E7617EB8A5600EF0E58 /* Social.framework */; };
 		04C2D21117DFF11B0086B9AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C2D21017DFF11B0086B9AD /* Foundation.framework */; };
 		04C2D21317DFF11B0086B9AD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C2D21217DFF11B0086B9AD /* CoreGraphics.framework */; };
 		04C2D21517DFF11B0086B9AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C2D21417DFF11B0086B9AD /* UIKit.framework */; };
@@ -42,8 +48,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042C079317EA220A005E989B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		042C079517EA2341005E989B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		042C079717EA2349005E989B /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		042C079B17EAB006005E989B /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSS3.framework; sourceTree = "<group>"; };
+		042C079D17EAB71A005E989B /* AWSRuntime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSRuntime.framework; sourceTree = "<group>"; };
 		0478C41017E122F0002EDA59 /* UIColor+PickRandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+PickRandomColor.h"; sourceTree = "<group>"; };
 		0478C41117E122F0002EDA59 /* UIColor+PickRandomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PickRandomColor.m"; sourceTree = "<group>"; };
+		048C5E7617EB8A5600EF0E58 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		04C2D20D17DFF11B0086B9AD /* Posts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C2D21017DFF11B0086B9AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		04C2D21217DFF11B0086B9AD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -83,7 +95,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048C5E7717EB8A5600EF0E58 /* Social.framework in Frameworks */,
+				042C079817EA2349005E989B /* CoreVideo.framework in Frameworks */,
+				042C079617EA2341005E989B /* CoreMedia.framework in Frameworks */,
+				042C079417EA220A005E989B /* AVFoundation.framework in Frameworks */,
+				042C079E17EAB71A005E989B /* AWSRuntime.framework in Frameworks */,
 				04C2D21317DFF11B0086B9AD /* CoreGraphics.framework in Frameworks */,
+				042C079C17EAB006005E989B /* AWSS3.framework in Frameworks */,
 				04C2D21517DFF11B0086B9AD /* UIKit.framework in Frameworks */,
 				04C2D21117DFF11B0086B9AD /* Foundation.framework in Frameworks */,
 				421064C1B1CF4EE29791171C /* libPods.a in Frameworks */,
@@ -126,6 +144,12 @@
 		04C2D20F17DFF11B0086B9AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				048C5E7617EB8A5600EF0E58 /* Social.framework */,
+				042C079D17EAB71A005E989B /* AWSRuntime.framework */,
+				042C079B17EAB006005E989B /* AWSS3.framework */,
+				042C079717EA2349005E989B /* CoreVideo.framework */,
+				042C079517EA2341005E989B /* CoreMedia.framework */,
+				042C079317EA220A005E989B /* AVFoundation.framework */,
 				04C2D21017DFF11B0086B9AD /* Foundation.framework */,
 				04C2D21217DFF11B0086B9AD /* CoreGraphics.framework */,
 				04C2D21417DFF11B0086B9AD /* UIKit.framework */,
@@ -482,6 +506,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/meghagulati/project/Posts,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Posts/Posts-Prefix.pch";
 				INFOPLIST_FILE = "Posts/Posts-Info.plist";
@@ -496,6 +524,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/meghagulati/project/Posts,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Posts/Posts-Prefix.pch";
 				INFOPLIST_FILE = "Posts/Posts-Info.plist";

@@ -14,6 +14,8 @@
 @property (nonatomic) NSString* title;
 @property (nonatomic) NSString* content;
 @property (nonatomic) NSString* createdAt;
+@property (nonatomic) NSString* imageFilename;
+
 @property (nonatomic) NSNumber* id;
 
 

@@ -16,7 +16,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    [NSRConfig defaultConfig].appURL = @"http://localhost:3000";
+    [NSRConfig defaultConfig].appURL = @"http://10.98.111.247:3000";
     [NSRConfig defaultConfig].appPassword = @"megha";
     [NSRConfig defaultConfig].appUsername = @"megha";
 

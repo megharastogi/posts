@@ -14,6 +14,7 @@
     @property (nonatomic) NSString* content;
     @property (nonatomic) NSString* timeStamp;
     @property (nonatomic) UIColor* postColor;
+    @property (nonatomic) NSString* imageFilename;
     - (id)initWithTimeStamp;
 
 @end

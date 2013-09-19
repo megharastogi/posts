@@ -10,6 +10,7 @@
 #import "PostDoc.h"
 #import "PostData.h"
 #import "Post.h"
+#import <Social/Social.h>
 
 @interface DetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -43,6 +44,7 @@
         self.userName.text = self.detailItem.data.userName;
         self.content.text = self.detailItem.data.content;
         self.timeStamp.text = self.detailItem.data.timeStamp;
+        self.postImage.image = self.detailItem.postImage;
     }
 }
 
@@ -56,6 +58,9 @@
                                    action:@selector(dismissKeyboard)];
     
     [self.view addGestureRecognizer:tap];
+    
+   
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -125,6 +130,20 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
 
 }
+
+-(IBAction)postToTwitter
+{
+    NSLog(@"goes here");
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+    {
+        SLComposeViewController *tweetSheet = [SLComposeViewController
+                                               composeViewControllerForServiceType:SLServiceTypeTwitter];
+        [tweetSheet setInitialText:_detailItem.data.title];
+        [self presentViewController:tweetSheet animated:YES completion:nil];
+    }
+    
+}
+
 
 #pragma mark - Split view
 

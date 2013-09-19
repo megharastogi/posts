@@ -12,6 +12,7 @@
 
 @interface PostDoc : NSObject
     @property (nonatomic) PostData* data;
-    -(id)initWithUserName:(NSString *)userName title:(NSString*)title content:(NSString*)content postColor:(UIColor*)postColor;
+    @property (nonatomic) UIImage* postImage;
+    -(id)initWithUserName:(NSString *)userName title:(NSString*)title content:(NSString*)content imageFilename:(NSString *)imageFilename postColor:(UIColor*)postColor;
     @property (nonatomic,strong) NSNumber* remoteObjectID;
 @end

@@ -33,6 +33,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *userName;
 @property (nonatomic) IBOutlet UITextView *content;
 @property (nonatomic) IBOutlet UILabel *timeStamp;
+@property (nonatomic) IBOutlet UIImageView *postImage;
 
 -(IBAction) pressedUpdateButton;
 

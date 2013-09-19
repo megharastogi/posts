@@ -11,12 +11,13 @@
 
 @implementation PostDoc
 
--(id)initWithUserName:(NSString *)userName title:(NSString*)title content:(NSString*)content postColor:(UIColor*)postColor{
+-(id)initWithUserName:(NSString *)userName title:(NSString*)title content:(NSString*)content imageFilename:(NSString *)imageFilename postColor:(UIColor*)postColor{
     if ((self = [super init])) {
         self.data = [[PostData alloc] initWithTimeStamp];
         self.data.userName = userName;
         self.data.title = title;
         self.data.content = content;
+        self.data.imageFilename = imageFilename;
         self.data.postColor = postColor;
     }
     return self;

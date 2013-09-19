@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AWSS3/AWSS3.h>
+
 @class AddDataViewController;
 @class PostDoc;
 
@@ -31,10 +33,15 @@
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapGesture;
 
--(IBAction) pressedSubmitButton;
+@property (nonatomic, retain) AmazonS3Client *s3;
 
-@property (strong,nonatomic) UITextField *activeField;
-@property (strong,nonatomic) UITextView *activeTextView;
+
+
+-(IBAction) pressedSubmitButton;
+- (IBAction)takePicture:(id)sender;
+
+@property (strong,nonatomic) UIView *activeField;
+//@property (strong,nonatomic) UITextView *activeTextView;
 
 #pragma mark - Public Methods
 
